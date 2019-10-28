@@ -13,6 +13,8 @@
             <asp:Label ID="Label1" runat="server" Text="显示信息："></asp:Label>
             <br />
             <asp:Button ID="btnSM" runat="server" OnClick="btnSM_Click" Text="连接数据库" />
+            <br />
+            <asp:Button ID="CreateTable" runat="server" OnClick="CreateTable_Click" Text="创建Test表" />
         </div>
     </form>
 </body>

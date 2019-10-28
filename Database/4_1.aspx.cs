@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -38,6 +39,21 @@ namespace Database
                 {
                     conn.Dispose();
                 }
+            }
+        }
+
+        protected void CreateTable_Click(object sender, EventArgs e)
+        {
+            string str = ConfigurationManager.ConnectionStrings["SMDB"].ConnectionString;
+            using(SqlConnection conn=new SqlConnection(str))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Create Table Test(tID Int)";
+                cmd.ExecuteNonQuery();
+                Label1.Text = "Test is Create";
             }
         }
     }
