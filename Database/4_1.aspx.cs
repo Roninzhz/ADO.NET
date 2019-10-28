@@ -56,5 +56,18 @@ namespace Database
                 Label1.Text = "Test is Create";
             }
         }
+
+        protected void Count_Click_Click(object sender, EventArgs e)
+        {
+            string str = ConfigurationManager.ConnectionStrings["SMDB"].ConnectionString;
+            using(SqlConnection conn=new SqlConnection(str))
+            {
+                conn.Open();
+                string cmdText = "Select count(*) from users";
+                SqlCommand cmd = new SqlCommand(cmdText, conn);
+                int nums = (int)cmd.ExecuteScalar();
+                Label1.Text = "本站注册人数:" + nums;
+            }
+        }
     }
 }
