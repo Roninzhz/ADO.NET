@@ -50,7 +50,7 @@
                 <tr>
                     <td>
                         <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="添加" />
-                        <asp:Button ID="Button2" runat="server" Text="取消" />
+                        <asp:Button ID="btnConfirm" runat="server" Text="登录" OnClick="btnConfirm_Click" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
