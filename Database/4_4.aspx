@@ -26,16 +26,20 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">用户名：<asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="reqtxtName" runat="server" ControlToValidate="txtName" ErrorMessage="必须填写用户名">*</asp:RequiredFieldValidator>
                     </td>
                     <td class="auto-style2"></td>
                 </tr>
                 <tr>
                     <td>密码：<asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="reqtxtPwd" runat="server" ControlToValidate="txtPwd" ErrorMessage="必须填写密码">*</asp:RequiredFieldValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>确认密码：<asp:TextBox ID="txtEPwd" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="reqtxtEPwd" runat="server" ControlToValidate="txtEPwd" ErrorMessage="必须填写确认密码">*</asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="comPwd" runat="server" ControlToCompare="txtPwd" ControlToValidate="txtEPwd" Display="Dynamic" ErrorMessage="确认密码与密码不相同">*</asp:CompareValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -44,6 +48,7 @@
                         <asp:ListItem Value="0">一般管理员</asp:ListItem>
                         <asp:ListItem Value="1">超级管理员</asp:ListItem>
                         </asp:DropDownList>
+                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
