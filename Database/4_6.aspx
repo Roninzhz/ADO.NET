@@ -13,6 +13,10 @@
             <asp:Label ID="lblView" runat="server" Text="查看商品信息表中的数据"></asp:Label>
             <br />
             <asp:Button ID="btnView" runat="server" OnClick="btnView_Click" Text="查看" />
+            <br />
+            数据的绑定<br />
+            成员变量值；<%# lblView.Text %><br />
+            虚拟应用程序根路径：<%# Request.ApplicationPath%>
         </div>
     </form>
 </body>

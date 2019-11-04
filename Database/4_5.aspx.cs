@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using System.Text;
+using System.Web.UI.WebControls;
 
 namespace Database
 {
@@ -29,7 +25,7 @@ namespace Database
         {
             ddlCols.Items.Clear();
             string str = ConfigurationManager.ConnectionStrings["SMDB"].ConnectionString;
-            using(SqlConnection conn=new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(str))
             {
                 conn.Open();
                 string cmdText = "select uName,uRealName,uPhone,uQQ from users";
@@ -51,7 +47,7 @@ namespace Database
         {
             ltbItems.Items.Clear();
             string str = ConfigurationManager.ConnectionStrings["SMDB"].ConnectionString;
-            using(SqlConnection conn=new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(str))
             {
                 conn.Open();
                 string filed = ddlCols.SelectedValue;

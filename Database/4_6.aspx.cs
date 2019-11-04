@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Text;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Text;
 
 namespace Database
 {
@@ -16,14 +10,14 @@ namespace Database
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.DataBind();
         }
 
         protected void btnView_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
             string str = ConfigurationManager.ConnectionStrings["SMDB"].ConnectionString;
-            using(SqlConnection conn=new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(str))
             {
                 conn.Open();
                 string cmdText = "select top 5 gdCode,gdName,gdPrice,gdQuantity,gdSaleQty from goods";
@@ -32,14 +26,14 @@ namespace Database
             }
             DataTable dt = ds.Tables["goods"];
             StringBuilder stblder = new StringBuilder("");
-            foreach(DataColumn col in dt.Columns)
+            foreach (DataColumn col in dt.Columns)
             {
                 stblder.Append(string.Format("[{0}]", col.ColumnName));
             }
-            foreach(DataRow row in dt.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 stblder.Append("<br/>");
-                foreach(DataColumn col in dt.Columns)
+                foreach (DataColumn col in dt.Columns)
                 {
                     stblder.Append(string.Format("-{0}-", row[col]));
                 }

@@ -1,10 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
 
@@ -20,7 +14,7 @@ namespace Database
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             string str = ConfigurationManager.ConnectionStrings["SMDB"].ConnectionString;
-            using(SqlConnection conn=new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(str))
             {
                 conn.Open();
                 string cmdText = "insert into Admins values(@name,@pwd,@type,default)";
@@ -50,7 +44,7 @@ namespace Database
             string name = txtName.Text;
             string pwd = txtPwd.Text;
             int type = int.Parse(ddlType.SelectedValue);
-            using(SqlConnection conn=new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(str))
             {
                 try
                 {
@@ -71,7 +65,7 @@ namespace Database
                         Response.Write("<script>alert('用户名或密码错误')</script>");
                     }
                 }
-                catch(Exception ee)
+                catch (Exception ee)
                 {
                     //Response.Write("<script>alert('用户名或密码错误')</script>");
                     Response.Write(ee.Message);
