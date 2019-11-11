@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            使用数据源控件实现商品信息显示：</div>
+        </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableModelValidation="True">
             <Columns>
                 <asp:BoundField DataField="gdCode" HeaderText="gdCode" SortExpression="gdCode" />
