@@ -19,7 +19,7 @@
                     <asp:ControlParameter ControlID="txtFind" Name="gdName" PropertyName="Text" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="gdID" DataSourceID="SqlDataSource1" EnableModelValidation="True" Height="50px" Width="125px" AllowPaging="True">
+            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="gdID" DataSourceID="SqlDataSource1" EnableModelValidation="True" Height="50px" Width="125px">
                 <Fields>
                     <asp:BoundField DataField="gdID" HeaderText="gdID" InsertVisible="False" ReadOnly="True" SortExpression="gdID" />
                     <asp:BoundField DataField="tID" HeaderText="tID" SortExpression="tID" />
@@ -35,7 +35,6 @@
                     <asp:BoundField DataField="gdAddTime" HeaderText="gdAddTime" SortExpression="gdAddTime" />
                     <asp:BoundField DataField="gdEvNum" HeaderText="gdEvNum" SortExpression="gdEvNum" />
                 </Fields>
-                <PagerSettings PageButtonCount="56" />
             </asp:DetailsView>
         </div>
     </form>
