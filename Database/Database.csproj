@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="4_1.aspx" />
-    <Content Include="4_10.aspx" />
     <Content Include="4_4.aspx" />
     <Content Include="4_5.aspx" />
     <Content Include="4_6.aspx" />
@@ -78,13 +77,6 @@
     </Compile>
     <Compile Include="4_1.aspx.designer.cs">
       <DependentUpon>4_1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="4_10.aspx.cs">
-      <DependentUpon>4_10.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="4_10.aspx.designer.cs">
-      <DependentUpon>4_10.aspx</DependentUpon>
     </Compile>
     <Compile Include="4_4.aspx.cs">
       <DependentUpon>4_4.aspx</DependentUpon>
