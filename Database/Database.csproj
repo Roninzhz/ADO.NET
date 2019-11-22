@@ -64,6 +64,8 @@
     <Content Include="4_1.aspx" />
     <Content Include="4_10.aspx" />
     <Content Include="4_11.aspx" />
+    <Content Include="4_12.aspx" />
+    <Content Include="4_14.aspx" />
     <Content Include="4_4.aspx" />
     <Content Include="4_5.aspx" />
     <Content Include="4_6.aspx" />
@@ -93,6 +95,20 @@
     </Compile>
     <Compile Include="4_11.aspx.designer.cs">
       <DependentUpon>4_11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="4_12.aspx.cs">
+      <DependentUpon>4_12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="4_12.aspx.designer.cs">
+      <DependentUpon>4_12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="4_14.aspx.cs">
+      <DependentUpon>4_14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="4_14.aspx.designer.cs">
+      <DependentUpon>4_14.aspx</DependentUpon>
     </Compile>
     <Compile Include="4_4.aspx.cs">
       <DependentUpon>4_4.aspx</DependentUpon>
