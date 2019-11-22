@@ -44,6 +44,10 @@
                 </ItemTemplate>
             </asp:DataList>
             <asp:SqlDataSource ID="sqlGoods" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\DataBase\SMDB.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="select * from [Goods]" />
+            <asp:Label ID="lblCurPage" runat="server" Text="" />
+            <asp:Label ID="lblTotalPage" runat="server" Text="" />
+            <asp:LinkButton ID="lbtnPre" runat="server" CommandName="Pre" OnCommand="LinkBtnClick" OnClick="lbtnPre_Click">上一页</asp:LinkButton>
+             <asp:LinkButton ID="lbtnNext" runat="server" CommandName="Next" OnCommand="LinkBtnClick" OnClick="lbtnNext_Click">下一页</asp:LinkButton>
                 </div>
     </form>
 </body>
